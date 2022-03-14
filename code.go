@@ -7,7 +7,7 @@ func SayHello() string {
 
 // multiple return value
 func NamaLengkap() (string, string, string) {
-	return "Agus", "Bambang", "Joko"
+	return "Agus", "Budiadi", "Hartono"
 }
 
 //interface struct
