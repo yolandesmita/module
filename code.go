@@ -18,11 +18,12 @@ func Diskon(nama string, filter func(string) string) {
 	fmt.Println("Pengunjung dengan nama", filterNama, "akan mendapatkan diskon")
 }
 
-func DiskonFilter(nama string) string{
-	if nama == "Agus"{
+func DiskonFilter(nama string) string {
+	if nama == "Agus" {
 		return "Selamat! Anda mendapatkan diskon 50%"
-	}else{
-	return "Anda mendapat diskon 5%"
+	} else {
+		return "Anda mendapat diskon 5%"
+	}
 }
 
 //interface struct
