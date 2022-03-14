@@ -6,9 +6,12 @@ func SayHello() string {
 }
 
 // multiple return value
-func NamaLengkap() (string, string, string) {
+func NamaPengunjung() (string, string, string) {
 	return "Agus", "Bambang", "Joko"
 }
+
+// // as a parameter
+// func Diskon(nama string, )
 
 //interface struct
 
