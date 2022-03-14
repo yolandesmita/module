@@ -31,7 +31,7 @@ func NamaPengunjung() (string, string, string) {
 }
 
 // as a parameter
-func Diskon(nama string, filter func(string) string) {
+func DiskonMakan(nama string, filter func(string) string) {
 	filterNama := filter(nama)
 	fmt.Println("Selamat", filterNama)
 }
