@@ -25,23 +25,3 @@ func DiskonFilter(nama string) string {
 		return "Anda mendapat diskon 5%"
 	}
 }
-
-//interface struct
-
-// type OperasiHitung interface {
-// 	Perkalian() int
-// 	// Keliling() int
-// 	// Luas() int
-// }
-
-// type Nilai struct {
-// 	a, b, c int
-// }
-
-// func (n Nilai) Perkalian() int {
-// 	return n.a * n.b * n.c
-// }
-
-// func (in InputPersegi) Luas() int {
-// 	return in.a * in.b
-// }
