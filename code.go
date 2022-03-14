@@ -2,6 +2,16 @@ package module
 
 import "fmt"
 
+type Blacklist func(string) bool
+
+func Pengunjung(resto string, blacklist Blacklist) {
+	if blacklist(resto) {
+		fmt.Println("Kamu telah mendapat diskon dari", resto)
+	} else {
+		fmt.Println("Kamu Punya Kesempatan Untuk Dapat Diskon")
+	}
+}
+
 // reutrn value
 func SayHello() string {
 	return "Selamat Datang!"
@@ -24,8 +34,14 @@ func DiskonFilter(nama string) string {
 	} else {
 		return "Mohon Maaf"
 	}
-}
 
-// func main() {
-// 	Diskon("Agus", DiskonFilter)
-// }
+	blacklist := func(resto string) bool {
+		return resto == "Boga"
+	}
+
+	Pengunjung("Boga", blacklist)
+
+	Pengunjung("Agus", func(name string) bool {
+		return name == "root"
+	})
+}
