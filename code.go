@@ -22,7 +22,7 @@ func Pengunjung(resto string, blacklist Blacklist) {
 
 // reutrn value
 func SayHello() string {
-	return "Selamat Datang!"
+	return "Selamat Datang"
 }
 
 // multiple return value
