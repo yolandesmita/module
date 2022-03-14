@@ -15,13 +15,13 @@ func NamaPengunjung() (string, string, string) {
 // as a parameter
 func Diskon(nama string, filter func(string) string) {
 	filterNama := filter(nama)
-	fmt.Println("Pengunjung dengan nama", filterNama, "akan mendapatkan diskon")
+	fmt.Println("Selamat", filterNama)
 }
 
 func DiskonFilter(nama string) string {
 	if nama == "Agus" {
-		return "Selamat! Anda mendapatkan diskon 50%"
+		return nama
 	} else {
-		return "Anda mendapat diskon 5%"
+		return "Mohon Maaf"
 	}
 }
