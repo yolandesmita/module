@@ -1,5 +1,7 @@
 package module
 
+import "fmt"
+
 // reutrn value
 func SayHello() string {
 	return "Selamat Datang!"
@@ -10,8 +12,10 @@ func NamaPengunjung() (string, string, string) {
 	return "Agus", "Bambang", "Joko"
 }
 
-// // as a parameter
-// func Diskon(nama string, )
+// as a parameter
+func Diskon(nama string, filter func(string) string) {
+	fmt.Println("Pengunjung dengan nama", filter(nama), "akan mendapatkan diskon")
+}
 
 //interface struct
 
