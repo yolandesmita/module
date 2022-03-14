@@ -25,3 +25,7 @@ func DiskonFilter(nama string) string {
 		return "Mohon Maaf"
 	}
 }
+
+// func main() {
+// 	Diskon("Agus", DiskonFilter)
+// }
