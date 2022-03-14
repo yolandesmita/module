@@ -4,6 +4,14 @@ import "fmt"
 
 type Blacklist func(string) bool
 
+type OperasiHitung interface {
+	Perkalian() int
+}
+
+type Nilai struct {
+	a, b, c int
+}
+
 func Pengunjung(resto string, blacklist Blacklist) {
 	if blacklist(resto) {
 		fmt.Println("Kamu telah mendapat diskon dari", resto)
@@ -34,14 +42,19 @@ func DiskonFilter(nama string) string {
 	} else {
 		return "Mohon Maaf"
 	}
-
-	blacklist := func(resto string) bool {
-		return resto == "Boga"
-	}
-
-	Pengunjung("Boga", blacklist)
-
-	Pengunjung("Agus", func(name string) bool {
-		return name == "root"
-	})
 }
+
+func (n Nilai) Perkalian() int {
+	return n.a * n.b * n.c
+}
+
+// func main()
+// blacklist := func(resto string) bool {
+// 	return resto == "Boga"
+// }
+
+// Pengunjung("Boga", blacklist)
+
+// Pengunjung("Agus", func(name string) bool {
+// 	return name == "root"
+// })
