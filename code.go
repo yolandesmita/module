@@ -1,5 +1,9 @@
 package module
 
+import "fmt"
+
+type Filter func(string) string
+
 // type Blacklist func(string) bool
 
 // type OperasiHitung interface {
@@ -29,18 +33,18 @@ func NamaPengunjung() (string, string, string) {
 }
 
 // // as a parameter
-// func DiskonMakan(nama string, filter func(string) string) {
-// 	filterNama := filter(nama)
-// 	fmt.Println("Selamat", filterNama)
-// }
+func DiskonMakan(nama string, filter Filter) {
+	filterNama := filter(nama)
+	fmt.Println("Selamat", filterNama)
+}
 
-// func DiskonFilter(nama string) string {
-// 	if nama == "Agus" {
-// 		return nama
-// 	} else {
-// 		return "Mohon Maaf"
-// 	}
-// }
+func DiskonFilter(nama string) string {
+	if nama == "Agus" {
+		return nama
+	} else {
+		return "Mohon Maaf"
+	}
+}
 
 // func (n Nilai) Perkalian() int {
 // 	return n.a * n.b * n.c
