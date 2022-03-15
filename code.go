@@ -32,19 +32,32 @@ func NamaPengunjung() (string, string, string) {
 	return "Agus", "Bambang", "Joko"
 }
 
-// // as a parameter
-func DiskonMakan(nama string, filter Filter) {
-	filterNama := filter(nama)
-	fmt.Println("Selamat", filterNama)
+func DiskonMakan(name string, filter Filter) {
+	nameFiltered := filter(name)
+	fmt.Println("Selamat", nameFiltered)
 }
 
-func DiskonFilter(nama string) string {
-	if nama == "Agus" {
-		return nama
+func DiskonFilter(name string) string {
+	if name == "Agus" {
+		return "..."
 	} else {
 		return "Mohon Maaf"
 	}
 }
+
+// // as a parameter
+// func DiskonMakan(nama string, filter Filter) {
+// 	filterNama := filter(nama)
+// 	fmt.Println("Selamat", filterNama)
+// }
+
+// func DiskonFilter(nama string) string {
+// 	if nama == "Agus" {
+// 		return nama
+// 	} else {
+// 		return "Mohon Maaf"
+// 	}
+// }
 
 // func (n Nilai) Perkalian() int {
 // 	return n.a * n.b * n.c
