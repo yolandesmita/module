@@ -4,18 +4,20 @@ import "fmt"
 
 type Negatif func(string) bool
 
-type Siswa struct{
+type Siswa struct {
 	NomorPeserta int8
-	NamaPeserta string
-	Ujian bool
-	
-func Peserta(nama string, antigenTest Negatif){
-	if antigenTest(nama){
+	NamaPeserta  string
+	Ujian        bool
+}
+
+func Peserta(nama string, antigenTest Negatif) {
+	if antigenTest(nama) {
 		fmt.Println(nama, "boleh ikut ujian")
-	}else{
+	} else {
 		fmt.Println(nama, "harus menjalani karantina")
 	}
 }
+
 // type Filter func(string) string
 // type Blacklist func(string) bool
 
