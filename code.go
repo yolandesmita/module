@@ -9,15 +9,14 @@ type Siswa struct{
 	NamaPeserta string
 	Ujian bool
 	
-	func Peserta(nama string, antigenTest Negatif){
-		if antigenTest(nama){
-			fmt.Println(nama, "boleh ikut ujian")
-		}else{
-			fmt.Println(nama, "harus menjalani karantina")
-		}
+func Peserta(nama string, antigenTest Negatif){
+	if antigenTest(nama){
+		fmt.Println(nama, "boleh ikut ujian")
+	}else{
+		fmt.Println(nama, "harus menjalani karantina")
 	}
+}
 // type Filter func(string) string
-
 // type Blacklist func(string) bool
 
 // type OperasiHitung interface {
