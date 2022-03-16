@@ -2,21 +2,23 @@ package module
 
 import "fmt"
 
-type Negatif func(string) bool
+type Diskon func(string) bool
 
-type Siswa struct {
-	NomorPeserta int8
-	NamaPeserta  string
-	Ujian        bool
-}
+// type Negatif func(string) bool
 
-func Peserta(nama string, antigenTest Negatif) {
-	if antigenTest(nama) {
-		fmt.Println(nama, "boleh ikut ujian")
-	} else {
-		fmt.Println(nama, "harus menjalani karantina")
-	}
-}
+// type Siswa struct {
+// 	NomorPeserta int8
+// 	NamaPeserta  string
+// 	Ujian        bool
+// }
+
+// func Peserta(nama string, antigenTest Negatif) {
+// 	if antigenTest(nama) {
+// 		fmt.Println(nama, "boleh ikut ujian")
+// 	} else {
+// 		fmt.Println(nama, "harus menjalani karantina")
+// 	}
+// }
 
 // type Filter func(string) string
 // type Blacklist func(string) bool
@@ -45,6 +47,14 @@ func SayHello() string {
 // multiple return value
 func NamaPengunjung() (string, string, string) {
 	return "Agus", "Bambang", "Joko"
+}
+
+func DiskonMakan(name string, diskon Diskon) {
+	if diskon(name) {
+		fmt.Println("Diskon 50% untuk pengunjung bernama", name)
+	} else {
+		fmt.Println("Anda mendapat potongan 5%", name)
+	}
 }
 
 // func DiskonMakan(name string, filter Filter) {
