@@ -50,11 +50,11 @@ func SayHello() string {
 }
 
 // anonymous function
-func DiskonMakan(name string, diskon Diskon) {
+func DiscountUsed(name string, diskon Diskon) {
 	if diskon(name) {
-		fmt.Println("Diskon 50% untuk pengunjung bernama", name)
+		fmt.Println("Diskon ini telah digunakan oleh", name)
 	} else {
-		fmt.Println("Anda mendapat potongan 5%", name)
+		fmt.Println("Diskon ini belum digunakan oleh", name)
 	}
 }
 
