@@ -47,7 +47,7 @@ func SayHello() string {
 // multiple return value
 // func NamaPengunjung() (string, string, string) {
 // 	return "Agus", "Bambang", "Joko"
-}
+// }
 
 // anonymous function
 func DiscountUsed(name string, diskon Diskon) {
