@@ -2,46 +2,19 @@ package module
 
 import "fmt"
 
-type Diskon func(string) bool
-
 type Filter func(string) string
 
-// type Negatif func(string) bool
+type Diskon func(string) bool
 
-// type Siswa struct {
-// 	NomorPeserta int8
-// 	NamaPeserta  string
-// 	Ujian        bool
-// }
+type OperasiHitung interface {
+	Perkalian() int
+}
 
-// func Peserta(nama string, antigenTest Negatif) {
-// 	if antigenTest(nama) {
-// 		fmt.Println(nama, "boleh ikut ujian")
-// 	} else {
-// 		fmt.Println(nama, "harus menjalani karantina")
-// 	}
-// }
+type Nilai struct {
+	a, b, c int
+}
 
-// type Filter func(string) string
-// type Blacklist func(string) bool
-
-// type OperasiHitung interface {
-// 	Perkalian() int
-// }
-
-// type Nilai struct {
-// 	a, b, c int
-// }
-
-// func Pengunjung(resto string, blacklist Blacklist) {
-// 	if blacklist(resto) {
-// 		fmt.Println("Kamu telah mendapat diskon dari", resto)
-// 	} else {
-// 		fmt.Println("Kamu Punya Kesempatan Untuk Dapat Diskon")
-// 	}
-// }
-
-// reutrn value
+// return value
 func SayHello() string {
 	return "Selamat Datang"
 }
@@ -49,6 +22,20 @@ func SayHello() string {
 // multiple return value
 func NamaPengunjung() (string, string, string) {
 	return "Agus", "Bambang", "Joko"
+}
+
+// as a parameter
+func DiskonMakan(nama string, filter Filter) {
+	filterNama := filter(nama)
+	fmt.Println("Selamat", filterNama)
+}
+
+func DiskonFilter(nama string) string {
+	if nama == "Agus" {
+		return "Selamat! Anda Mendapatkan Diskon 50%"
+	} else {
+		return "Mohon Maaf, Silahkan Coba Lagi di Lain Kesempatan"
+	}
 }
 
 // anonymous function
@@ -60,44 +47,6 @@ func DiscountUsed(name string, diskon Diskon) {
 	}
 }
 
-// func DiskonMakan(name string, filter Filter) {
-// 	nameFiltered := filter(name)
-// 	fmt.Println("Selamat", nameFiltered)
-// }
-
-// func DiskonFilter(name string) string {
-// 	if name == "Agus" {
-// 		return "..."
-// 	} else {
-// 		return "Mohon Maaf"
-// 	}
-// }
-
-// as a parameter
-func DiskonMakan(nama string, filter Filter) {
-	filterNama := filter(nama)
-	fmt.Println("Selamat", filterNama)
+func (n Nilai) Perkalian() int {
+	return nilai_a * nilai_b * nilai_c
 }
-
-func DiskonFilter(nama string) string {
-	if nama == "Agus" {
-		return nama
-	} else {
-		return "Mohon Maaf"
-	}
-}
-
-// func (n Nilai) Perkalian() int {
-// 	return n.a * n.b * n.c
-// }
-
-// // func main()
-// // blacklist := func(resto string) bool {
-// // 	return resto == "Boga"
-// // }
-
-// // Pengunjung("Boga", blacklist)
-
-// // Pengunjung("Agus", func(name string) bool {
-// // 	return name == "root"
-// // })
