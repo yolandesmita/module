@@ -46,7 +46,7 @@ func SayHello() string {
 	return "Selamat Datang"
 }
 
-multiple return value
+// multiple return value
 func NamaPengunjung() (string, string, string) {
 	return "Agus", "Bambang", "Joko"
 }
