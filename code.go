@@ -46,10 +46,10 @@ func SayHello() string {
 	return "Selamat Datang"
 }
 
-// multiple return value
-// func NamaPengunjung() (string, string, string) {
-// 	return "Agus", "Bambang", "Joko"
-// }
+multiple return value
+func NamaPengunjung() (string, string, string) {
+	return "Agus", "Bambang", "Joko"
+}
 
 // anonymous function
 func DiscountUsed(name string, diskon Diskon) {
