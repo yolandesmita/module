@@ -4,6 +4,8 @@ import "fmt"
 
 type Diskon func(string) bool
 
+type Filter func(string) string
+
 // type Negatif func(string) bool
 
 // type Siswa struct {
