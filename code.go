@@ -45,10 +45,11 @@ func SayHello() string {
 }
 
 // multiple return value
-func NamaPengunjung() (string, string, string) {
-	return "Agus", "Bambang", "Joko"
+// func NamaPengunjung() (string, string, string) {
+// 	return "Agus", "Bambang", "Joko"
 }
 
+// anonymous function
 func DiskonMakan(name string, diskon Diskon) {
 	if diskon(name) {
 		fmt.Println("Diskon 50% untuk pengunjung bernama", name)
@@ -70,19 +71,19 @@ func DiskonMakan(name string, diskon Diskon) {
 // 	}
 // }
 
-// // as a parameter
-// func DiskonMakan(nama string, filter Filter) {
-// 	filterNama := filter(nama)
-// 	fmt.Println("Selamat", filterNama)
-// }
+// as a parameter
+func DiskonMakan(nama string, filter Filter) {
+	filterNama := filter(nama)
+	fmt.Println("Selamat", filterNama)
+}
 
-// func DiskonFilter(nama string) string {
-// 	if nama == "Agus" {
-// 		return nama
-// 	} else {
-// 		return "Mohon Maaf"
-// 	}
-// }
+func DiskonFilter(nama string) string {
+	if nama == "Agus" {
+		return nama
+	} else {
+		return "Mohon Maaf"
+	}
+}
 
 // func (n Nilai) Perkalian() int {
 // 	return n.a * n.b * n.c
