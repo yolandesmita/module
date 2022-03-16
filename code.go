@@ -40,7 +40,7 @@ func DiskonFilter(nama string) string {
 	if nama == "Agus" {
 		return "Selamat! Anda Mendapatkan Diskon 50%"
 	} else {
-		return "Mohon Maaf, Silahkan Coba Lagi di Lain Kesempatan"
+		return "Mohon Maaf, Silahkan Coba Lagi di Kesempatan Lain"
 	}
 }
 
@@ -52,8 +52,6 @@ func DiscountUsed(name string, diskon Diskon) {
 		fmt.Println("Diskon ini belum digunakan oleh", name)
 	}
 }
-
-// anonymous struct
 
 // struct and interface
 func (n Nilai) Perkalian() int {
