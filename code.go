@@ -48,5 +48,5 @@ func DiscountUsed(name string, diskon Diskon) {
 }
 
 func (n Nilai) Perkalian() int {
-	return a * b * c
+	return n.a * n.b * n.c
 }
