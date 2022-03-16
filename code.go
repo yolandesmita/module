@@ -10,6 +10,12 @@ type OperasiHitung interface {
 	Perkalian() int
 }
 
+type Customer struct {
+	penerima  string
+	usia      int
+	pekerjaan string
+}
+
 type Nilai struct {
 	a, b, c int
 }
@@ -47,6 +53,9 @@ func DiscountUsed(name string, diskon Diskon) {
 	}
 }
 
+// anonymous struct
+
+// struct and interface
 func (n Nilai) Perkalian() int {
 	return n.a * n.b * n.c
 }
