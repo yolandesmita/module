@@ -56,5 +56,5 @@ func DiscountUsed(name string, diskon Diskon) {
 // struct and interface
 
 func (Hasil Nilai) Perkalian() int {
-	return n.a * n.b * n.c
+	return Hasil.a * Hasil.b * Hasil.c
 }
