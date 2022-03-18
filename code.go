@@ -10,6 +10,10 @@ type OperasiHitung interface {
 	Perkalian() int
 }
 
+func Angka(input InputAngka) {
+	fmt.Println(input.Perkalian())
+}
+
 type Customer struct {
 	penerima  string
 	usia      int
@@ -55,6 +59,6 @@ func DiscountUsed(name string, diskon Diskon) {
 
 // struct and interface
 
-func (Hasil Nilai) Perkalian() int {
-	return Hasil.a * Hasil.b * Hasil.c
+func (n Nilai) Perkalian() int {
+	return n.a * n.b * n.c
 }
