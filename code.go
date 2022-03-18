@@ -10,7 +10,7 @@ type OperasiHitung interface {
 	Perkalian() int
 }
 
-func Angka(input Nilai) {
+func Angka(input OperasiHitung) {
 	fmt.Println(input.Perkalian())
 }
 
